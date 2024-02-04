@@ -1,0 +1,17 @@
+pipeline{
+agent any
+   stage{
+      stage('Priavate id detail'){
+         step{
+            sh "echo ip address"
+            hostname -I
+         }  
+      }
+      stage("CPU details"){
+         step{
+            sh "echo CPU utilistion"
+            lscpu
+         } 
+      }        
+   }
+}
